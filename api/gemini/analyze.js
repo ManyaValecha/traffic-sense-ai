@@ -18,10 +18,10 @@ export default async function handler(req, res) {
     primaryRoute: "Nearest main arterial diversion corridor.",
     secondaryRoute: "Parallel service road buffer bypass.",
     timeline: [
-      "0–5 min: Alert control room and classify the incident as high priority.",
-      "5–15 min: Deploy officers, barricades, and emergency support assets.",
-      "15–30 min: Activate route diversions and public warning messages.",
-      "30–45 min: Stabilize queue flow and reopen lanes gradually."
+      { time: "0–5 min", action: "Alert control room and classify the incident as high priority." },
+      { time: "5–15 min", action: "Deploy officers, barricades, and emergency support assets." },
+      { time: "15–30 min", action: "Activate route diversions and public warning messages." },
+      { time: "30–45 min", action: "Stabilize queue flow and reopen lanes gradually." }
     ]
   };
 
@@ -36,11 +36,11 @@ export default async function handler(req, res) {
       primaryRoute: "Thanisandra Main Road controlled diversion toward Hebbal service road.",
       secondaryRoute: "Hennur-Bagalur Road overflow bypass for non-local traffic.",
       timeline: [
-        "0–5 min: Flag Nagavara-ORR as a critical construction bottleneck and alert traffic control.",
-        "5–15 min: Deploy officers at entry merge points and coordinate with the metro/site team.",
-        "15–30 min: Activate Thanisandra and Hebbal service-road diversions with signage.",
-        "30–60 min: Maintain single-lane metering and prevent queue spillback into ORR.",
-        "60–75 min: Clear construction spillover and reopen the restricted lane in phases."
+        { time: "0–5 min", action: "Flag Nagavara-ORR as a critical construction bottleneck and alert traffic control." },
+        { time: "5–15 min", action: "Deploy officers at entry merge points and coordinate with the metro/site team." },
+        { time: "15–30 min", action: "Activate Thanisandra and Hebbal service-road diversions with signage." },
+        { time: "30–60 min", action: "Maintain single-lane metering and prevent queue spillback into ORR." },
+        { time: "60–75 min", action: "Clear construction spillover and reopen the restricted lane in phases." }
       ]
     };
   }
@@ -56,10 +56,10 @@ export default async function handler(req, res) {
       primaryRoute: "Outer Ring Road diversion through HSR-side access.",
       secondaryRoute: "BTM Layout and Hosur Road controlled bypass.",
       timeline: [
-        "0–5 min: Mark underpass as unsafe and stop vehicles before water entry.",
-        "5–15 min: Dispatch tow unit, drainage crew, and officers to both approaches.",
-        "15–30 min: Divert vehicles through ORR, BTM Layout, and HSR-side routes.",
-        "30–45 min: Remove stalled vehicle and reopen lanes only after water level drops."
+        { time: "0–5 min", action: "Mark underpass as unsafe and stop vehicles before water entry." },
+        { time: "5–15 min", action: "Dispatch tow unit, drainage crew, and officers to both approaches." },
+        { time: "15–30 min", action: "Divert vehicles through ORR, BTM Layout, and HSR-side routes." },
+        { time: "30–45 min", action: "Remove stalled vehicle and reopen lanes only after water level drops." }
       ]
     };
   }
@@ -75,10 +75,10 @@ export default async function handler(req, res) {
       primaryRoute: "Airport corridor green-wave priority route through Mekhri Circle.",
       secondaryRoute: "Palace Road and Hebbal buffer diversion for civilian traffic.",
       timeline: [
-        "0–5 min: Freeze convoy corridor and notify junction control teams.",
-        "5–15 min: Deploy pilot vehicles and restrict conflicting public movement.",
-        "15–25 min: Move convoy through controlled green-wave corridor.",
-        "25–40 min: Release civilian traffic in staggered phases to avoid surge."
+        { time: "0–5 min", action: "Freeze convoy corridor and notify junction control teams." },
+        { time: "5–15 min", action: "Deploy pilot vehicles and restrict conflicting public movement." },
+        { time: "15–25 min", action: "Move convoy through controlled green-wave corridor." },
+        { time: "25–40 min", action: "Release civilian traffic in staggered phases to avoid surge." }
       ]
     };
   }
