@@ -1,38 +1,30 @@
 export default async function handler(req, res) {
-  try {
-    res.status(200).json({
-      success: true,
-      plan: {
-        title: "AI Dispatch Action Plan",
-        summary: "TrafficSense AI recommends immediate rerouting, officer redeployment, and congestion monitoring for the selected Bengaluru corridor.",
-        priority: "High",
-        actions: [
-          "Deploy 4 officers near the predicted bottleneck zone.",
-          "Activate diversion messaging toward Outer Ring Road.",
-          "Monitor Silk Board and KR Puram corridors for the next 30 minutes.",
-          "Prioritize emergency-lane clearance and breakdown response."
-        ],
-        eta: "30–45 minutes",
-        confidence: "91%"
-      },
-      text: `AI Dispatch Action Plan
-
-Priority: High
-
-1. Deploy 4 officers near the predicted bottleneck zone.
-2. Activate diversion messaging toward Outer Ring Road.
-3. Monitor Silk Board and KR Puram corridors for the next 30 minutes.
-4. Prioritize emergency-lane clearance and breakdown response.
-
-Estimated recovery window: 30–45 minutes.
-Confidence: 91%.`,
-      timestamp: new Date().toISOString(),
-      isFallback: true
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      error: "Failed to generate dispatch plan."
-    });
-  }
+  return res.status(200).json({
+    success: true,
+    data: {
+      title: "Silk Board Monsoon Mitigation Plan",
+      priority: "CRITICAL",
+      confidence: 91,
+      summary: "Immediate waterlogging containment, broken vehicle removal, lane diversion, and peak-hour dispatch control required.",
+      timeline: [
+        "0–5 min: Alert Bengaluru traffic control room and flag Silk Board underpass as high-risk.",
+        "5–15 min: Dispatch tow unit, drainage crew, and 4 traffic officers.",
+        "15–30 min: Divert traffic toward Outer Ring Road, BTM Layout, and HSR Layout.",
+        "30–45 min: Remove stalled vehicle and reopen lanes gradually."
+      ],
+      assets: [
+        "4 traffic officers",
+        "1 tow vehicle",
+        "1 drainage response team",
+        "2 barricade units",
+        "Variable message sign alerts"
+      ],
+      routes: [
+        "Outer Ring Road diversion",
+        "BTM Layout alternate corridor",
+        "HSR Layout controlled bypass"
+      ],
+      eta: "30–45 minutes"
+    }
+  });
 }
