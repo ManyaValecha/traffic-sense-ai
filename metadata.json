@@ -1,0 +1,6 @@
+{
+  "name": "TrafficSense AI Bengaluru",
+  "description": "Event-driven congestion intelligence for Bengaluru traffic management - predict impact, recommend deployment plans, track hotspots, and automate post-event learning.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
