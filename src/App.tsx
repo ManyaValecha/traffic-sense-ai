@@ -13,7 +13,9 @@ import LiveAlertsTicker from "./components/LiveAlertsTicker";
 import DebtSection from "./components/DebtSection";
 import { ClickPopEffect } from "./components/ClickPopEffect";
 
-type TabID = "overview" | "copilot" | "predict" | "congestion_debt" | "deploy" | "hotspot" | "post_event" | "arch";
+import GreenCorridorSection from "./components/GreenCorridorSection";
+
+type TabID = "overview" | "copilot" | "predict" | "congestion_debt" | "deploy" | "hotspot" | "post_event" | "arch" | "green_corridor";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<TabID>("overview");
@@ -59,6 +61,7 @@ export default function App() {
     { id: "hotspot" as TabID, label: "Hotspot Map", icon: Map },
     { id: "post_event" as TabID, label: "Post-Event Learning", icon: Brain },
     { id: "arch" as TabID, label: "Architecture Specs", icon: Network },
+    { id: "green_corridor" as TabID, label: "Emergency Green Corridor", icon: Zap, highlight: true },
   ];
 
   const renderTabContent = () => {
@@ -79,6 +82,8 @@ export default function App() {
         return <PostLearnSection />;
       case "arch":
         return <ArchSection />;
+      case "green_corridor":
+        return <GreenCorridorSection />;
     }
   };
 
