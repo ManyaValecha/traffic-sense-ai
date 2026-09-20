@@ -54,14 +54,14 @@ export default function App() {
 
   const tabs = [
     { id: "overview" as TabID, label: "Live Overview", icon: Layout },
-    { id: "copilot" as TabID, label: "AI Copilot Simulator", icon: Sparkles, highlight: true },
+    { id: "green_corridor" as TabID, label: "⚡ Emergency Green Corridor", icon: Zap, highlight: true },
+    { id: "copilot" as TabID, label: "AI Copilot Simulator", icon: Sparkles },
     { id: "predict" as TabID, label: "Predict Impact", icon: ShieldAlert },
     { id: "congestion_debt" as TabID, label: "Congestion Debt Engine", icon: Landmark },
     { id: "deploy" as TabID, label: "Deploy Recommendations", icon: Award },
     { id: "hotspot" as TabID, label: "Hotspot Map", icon: Map },
     { id: "post_event" as TabID, label: "Post-Event Learning", icon: Brain },
     { id: "arch" as TabID, label: "Architecture Specs", icon: Network },
-    { id: "green_corridor" as TabID, label: "Emergency Green Corridor", icon: Zap, highlight: true },
   ];
 
   const renderTabContent = () => {
@@ -168,10 +168,16 @@ export default function App() {
         <div id="hero-section" className="bg-[#ebf4ff] dark:bg-[#1c2638] border border-[#2874f0]/15 dark:border-[#2e3d54] rounded-3xl p-10 sm:p-12 lg:p-14 shadow-sm flex flex-col lg:flex-row justify-between items-center gap-10 relative overflow-hidden">
           <div className="space-y-5 max-w-2xl text-left">
             {/* Badge */}
-            <div className="flex">
+            <div className="flex flex-wrap gap-2">
               <span className="px-3.5 py-1.5 rounded-lg text-[11px] font-black bg-flipkart-yellow text-[#172337] border border-amber-300 uppercase tracking-wider font-mono shadow-sm">
                 Flipkart Gridlock 2.0 · Live Telemetry Protocol
               </span>
+              <button
+                onClick={() => setActiveTab("green_corridor")}
+                className="px-3 py-1 rounded-lg text-[11px] font-black bg-emerald-500 hover:bg-emerald-600 text-white uppercase tracking-wider font-mono shadow-sm transition-all cursor-pointer flex items-center gap-1 animate-pulse"
+              >
+                <Zap className="w-3.5 h-3.5" /> 🚨 AWS Emergency Green Corridor
+              </button>
             </div>
 
             {/* Headline & Subtext */}
