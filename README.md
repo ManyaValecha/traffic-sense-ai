@@ -2,7 +2,7 @@
 
 ### *AI-Powered Event-Driven Traffic Intelligence for Smarter Urban Mobility*
 
-> **Flipkart GRIDLOCK Hackathon 2.0 | Prototype Phase**
+
 
 TrafficSense AI is an intelligent traffic command platform designed to help traffic authorities **predict, manage, and resolve event-driven congestion** across Bengaluru.
 
@@ -293,17 +293,7 @@ Delhi Technological University (DTU)
 
 ---
 
-# 🙏 Acknowledgements
 
-Special thanks to:
-
-* **Flipkart GRIDLOCK Hackathon**
-* **Bengaluru Traffic Police (ASTraM)**
-* **MapmyIndia**
-
-for providing the challenge, traffic intelligence resources, and inspiration behind this project.
-
----
 
 ## ⭐ Vision
 
